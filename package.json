@@ -1,0 +1,23 @@
+{
+  "name": "mini-project-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gains-Orientered-Programming/Mini-Project-3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gains-Orientered-Programming/Mini-Project-3/issues"
+  },
+  "homepage": "https://github.com/Gains-Orientered-Programming/Mini-Project-3#readme",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "kafkajs": "^2.2.4"
+  }
+}
