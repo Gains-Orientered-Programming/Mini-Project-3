@@ -1,6 +1,6 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import { handlePurchaseRequest } from './src/controllers/purchaseController';
+import express from "express";
+import bodyParser from "body-parser";
+import { handlePurchaseRequest } from "./controllers/purchaseController";
 
 const app = express();
 const PORT = 3000;
@@ -8,9 +8,9 @@ const PORT = 3000;
 app.use(bodyParser.json());
 
 // Define routes
-app.post('/purchase', handlePurchaseRequest);
+app.post("/purchase", handlePurchaseRequest);
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Purchase History Service is running on port ${PORT}`);
+  console.log(`Purchase History Service is running on port ${PORT}`);
 });

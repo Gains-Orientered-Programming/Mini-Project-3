@@ -1,7 +1,7 @@
-import { BaseModel } from '../../common/models/baseModel';
+import { BaseModel } from "../../../common/src/models/baseModel";
 
 export interface GatewayModel extends BaseModel {
-    productName: string;
-    quantity: number;
-    // Add more properties as needed
+  productName: string;
+  quantity: number;
+  // Add more properties as needed
 }
