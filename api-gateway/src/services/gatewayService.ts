@@ -1,8 +1,8 @@
 import * as eventTypes from '../../common/events/eventTypes';
 import { createConsumer, subscribeToTopic } from '../../common/utils/messaging';
-import { PurchaseModel } from '../models/purchaseModel';
+import { GatewayModel } from '../models/gatewayModel';
 
-export class PurchaseService {
+export class GatewayService {
     private purchaseConsumer = createConsumer('purchase-group');
 
     constructor() {
@@ -16,11 +16,9 @@ export class PurchaseService {
 
     private async setupPurchaseConsumer() {
         await subscribeToTopic(this.purchaseConsumer, eventTypes.PURCHASE_EVENT, (payload) => {
-            const purchaseData = JSON.parse(payload.message.value.toString()) as PurchaseModel;
+            const purchaseData = JSON.parse(payload.message.value.toString()) as GatewayModel;
             // Process and handle the purchase data as needed
             console.log('Received Purchase Event:', purchaseData);
         });
     }
-
-    // Add more methods related to purchase processing as needed
 }

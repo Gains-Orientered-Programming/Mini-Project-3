@@ -3,12 +3,12 @@ import { sendMessage } from '../../common/utils/messaging';
 import * as eventTypes from '../../common/events/eventTypes';
 
 export const handlePurchaseRequest = async (req: Request, res: Response) => {
-    const { productName, quantity, supplier, purchaseDate } = req.body;
+    const { productName, quantity } = req.body;
 
     // Validate the request if needed
 
     // Forward the request to the appropriate microservice
-    await sendMessage('purchase-events', eventTypes.PURCHASE_EVENT, JSON.stringify({ productName, quantity, supplier, purchaseDate }));
+    await sendMessage('purchase-events', eventTypes.PURCHASE_EVENT, JSON.stringify({ productName, quantity }));
 
-    res.status(202).json({ message: 'Purchase request forwarded for processing' });
+    res.status(202).json({ message: 'Request forwarded for processing' });
 };

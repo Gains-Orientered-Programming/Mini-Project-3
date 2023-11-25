@@ -1,5 +1,13 @@
 // Create a base model that other models will extend
 
 export interface BaseModel {
-    // Define common properties or methods here
+    id: string;
+    createdAt: Date;
+    updatedAt: Date;
+}
+
+export interface PurchaseModel extends BaseModel {
+    // Properties specific to the Purchase model
+    productName: string;
+    quantity: number;
 }

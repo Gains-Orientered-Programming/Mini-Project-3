@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { handlePurchaseRequest } from './src/controllers/purchaseController';
+import { handlePurchaseRequest } from './src/controllers/gatewayController';
 
 const app = express();
 const PORT = 3000;
@@ -12,5 +12,5 @@ app.post('/purchase', handlePurchaseRequest);
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Purchase History Service is running on port ${PORT}`);
+    console.log(`API Gateway is running on port ${PORT}`);
 });
