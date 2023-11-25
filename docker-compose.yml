@@ -1,0 +1,31 @@
+version: '3'
+services:
+  purchase-history-service:
+    build:
+      context: ./microservices/purchase-history-service
+    ports:
+      - "3000:3000"
+
+  resource-tracking-service:
+    build:
+      context: ./microservices/resource-tracking-service
+    ports:
+      - "3001:3000"
+
+  delivery-service:
+    build:
+      context: ./microservices/delivery-service
+    ports:
+      - "3002:3000"
+
+  expense-management-service:
+    build:
+      context: ./microservices/expense-management-service
+    ports:
+      - "3003:3000"
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+    ports:
+      - "8080:3000"
